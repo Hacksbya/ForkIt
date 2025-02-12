@@ -3,35 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meal Plan Generator</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+    <title>I'm Sorry</title>
+    <style>
+        body {
+            background-color: #222;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: bold;
+            text-shadow: 0 0 10px #ff4b5c, 0 0 20px #ff4b5c, 0 0 30px #ff4b5c;
+            animation: glow 2s infinite alternate, fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 20px;
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out 1s forwards;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #ff4b5c, 0 0 20px #ff4b5c;
+            }
+            to {
+                text-shadow: 0 0 20px #ff4b5c, 0 0 30px #ff4b5c;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Generate Your Meal Plan</h1>
-        <form id="meal-plan-form">
-            <label for="proteinMin">Protein (Min, g):</label>
-            <input type="number" id="proteinMin" name="proteinMin" required>
 
-            <label for="proteinMax">Protein (Max, g):</label>
-            <input type="number" id="proteinMax" name="proteinMax" required>
+    <h1>I'm Sorry</h1>
+    <p>I never meant to hurt you. Please forgive me.</p>
 
-            <label for="carbsMin">Carbs (Min, g):</label>
-            <input type="number" id="carbsMin" name="carbsMin" required>
-
-            <label for="carbsMax">Carbs (Max, g):</label>
-            <input type="number" id="carbsMax" name="carbsMax" required>
-
-            <label for="energyMin">Energy (Min, kcal):</label>
-            <input type="number" id="energyMin" name="energyMin" required>
-
-            <label for="energyMax">Energy (Max, kcal):</label>
-            <input type="number" id="energyMax" name="energyMax" required>
-
-            <button type="button" id="generate-meal-plan">Generate Meal Plan</button>
-        </form>
-    </div>
-
-    <script src="/static/js/main.js"></script>
 </body>
 </html>
